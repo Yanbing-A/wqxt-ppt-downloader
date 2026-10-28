@@ -2,6 +2,9 @@
 
 DeepSeek生成
 
+界面
+<img width="371" height="320" alt="0c579bce-0d31-464f-ac65-7cc476947f31" src="https://github.com/user-attachments/assets/ada3b71d-b0e5-4316-939f-94807fa3a959" />
+
 
 
 一个 **Microsoft Edge / Chrome 扩展**，用于把问渠学堂课程回放左侧的 PPT 一次性下载下来。
