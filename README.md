@@ -1,5 +1,9 @@
 # 问渠学堂 PPT 下载器
 
+DeepSeek生成
+
+
+
 一个 **Microsoft Edge / Chrome 扩展**，用于把问渠学堂课程回放左侧的 PPT 一次性下载下来。
 
 适用页面：
