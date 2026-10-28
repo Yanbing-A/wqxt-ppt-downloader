@@ -1,0 +1,197 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b1422;
+  --panel: rgba(255, 255, 255, 0.055);
+  --line: rgba(140, 185, 255, 0.16);
+  --text: #eaf2ff;
+  --muted: #8fa6c4;
+  --blue: #2f86ff;
+  --blue-2: #1b62df;
+  --green: #58e0c0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  width: 360px;
+  min-height: 480px;
+  background:
+    radial-gradient(700px 340px at 85% -10%, rgba(47, 134, 255, 0.23), transparent 62%),
+    radial-gradient(500px 300px at 0% 105%, rgba(88, 224, 192, 0.08), transparent 60%),
+    var(--bg);
+  color: var(--text);
+  font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+body { padding: 16px 16px 12px; }
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 14px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: linear-gradient(145deg, #3b8dff, #1450bf);
+  box-shadow: 0 9px 24px rgba(24, 91, 219, 0.38);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.hero p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.status-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 20px;
+  font-size: 12px;
+  color: #cfe1ff;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6f87a4;
+  box-shadow: 0 0 0 4px rgba(111, 135, 164, 0.12);
+  flex: 0 0 auto;
+}
+
+.dot.ok { background: var(--green); box-shadow: 0 0 0 4px rgba(88, 224, 192, 0.12); }
+.dot.warn { background: #ffd18a; box-shadow: 0 0 0 4px rgba(255, 209, 138, 0.12); }
+.dot.err { background: #ff9b9b; box-shadow: 0 0 0 4px rgba(255, 155, 155, 0.12); }
+
+.meta-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 9px;
+  min-height: 22px;
+}
+
+.chip {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+  color: #bcd6ff;
+  background: rgba(47, 134, 255, 0.13);
+  border: 1px solid rgba(83, 150, 255, 0.2);
+  border-radius: 999px;
+  padding: 3px 8px;
+}
+
+.bar {
+  height: 3px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.bar i {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #3b8dff, var(--green));
+  transition: width 0.25s ease;
+}
+
+.course {
+  margin: 8px 0 0;
+  min-height: 16px;
+  color: var(--muted);
+  font-size: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 9px;
+  padding: 9px 8px;
+  font-size: 12px;
+  font-weight: 650;
+  color: #dbe9ff;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: background 0.15s, transform 0.05s, opacity 0.15s;
+}
+
+button:hover { background: rgba(255, 255, 255, 0.13); }
+button:active { transform: translateY(1px); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+button.primary {
+  color: #fff;
+  background: linear-gradient(145deg, var(--blue), var(--blue-2));
+  border-color: rgba(130, 190, 255, 0.45);
+  box-shadow: 0 7px 20px rgba(28, 100, 235, 0.3);
+}
+
+button.primary:hover { background: linear-gradient(145deg, #3d93ff, #2470ec); }
+
+button.ghost {
+  background: transparent;
+  color: #9db4d3;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.notice {
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 11px;
+  padding: 10px 11px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.notice b { font-size: 11px; color: #cfe1ff; }
+.notice p { margin: 4px 0 0; font-size: 10px; line-height: 1.55; color: var(--muted); }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  color: #647c99;
+  font-size: 9.5px;
+}

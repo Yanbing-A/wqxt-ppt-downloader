@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>问渠学堂 PPT 下载器</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="logo">PPT</div>
+    <div class="hero-text">
+      <h1>问渠 PPT 下载器</h1>
+      <p>把课程回放左侧的幻灯片一次带走</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="status-card">
+      <div class="status-row">
+        <span class="dot" id="dot"></span>
+        <span id="status">正在连接课程页面…</span>
+      </div>
+      <div class="meta-row">
+        <span class="chip" id="count">0 页</span>
+        <span class="chip" id="source">—</span>
+      </div>
+      <div class="bar"><i id="bar"></i></div>
+      <p class="course" id="course"></p>
+    </section>
+
+    <section class="actions">
+      <button class="primary" id="zip">打包下载 ZIP</button>
+      <button class="ghost" id="capture">逐页截图（打包下载失效时可使用此功能）</button>
+      <button class="ghost" id="refresh">重新检测</button>
+    </section>
+
+    <section class="notice">
+      <b>使用提示</b>
+      <p>先打开课程回放，展开左侧「PPT」等缩略图出现，再点上方按钮。页面右下角的小「PPT」按钮点开就是下载面板。</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>仅在本机运行 · 不读取登录凭据</span>
+    <span id="version">v1.1.0</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
